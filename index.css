@@ -758,6 +758,10 @@
 
 /* responsive */
 @media (max-width: 767px) {
+  .nav-bar
+    {
+        display: none;
+    }
   .timeline-items::before {
     left: 7px;
   }
