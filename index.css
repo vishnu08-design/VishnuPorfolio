@@ -750,6 +750,7 @@
 @media (min-width: 425px) and (max-width: 768px) {
   .profession {
     font-size: 1.67rem;
+    margin-left: 0px;
   }
 }
 /* responsive */
