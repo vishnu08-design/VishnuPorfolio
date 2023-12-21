@@ -575,7 +575,7 @@
 }
 
 .profession {
-  margin-left: 180px;
+  margin-left: 100px;
   font-size: 2rem;
   display: flex;
   align-items: center;
@@ -738,9 +738,15 @@
   line-height: 22px;
 }
 
-@media (min-width: 320px) and (max-width) {
-  .welcome {
-    margin-right: 200px;
+@media (min-width: 320px) and (max-width: 424px) {
+  .profession {
+    font-size: 1.67rem;
+    margin-left: 10px;
+  }
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  .profession {
+    font-size: 1.67rem;
   }
 }
 /* responsive */
