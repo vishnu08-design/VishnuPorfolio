@@ -562,17 +562,17 @@ html {
 
 .welcome {
   font-size: 2.5rem;
-  color: lightgray;
+  color: rgb(182, 187, 196);
 }
 
 .my-self {
   font-size: 3.5rem;
-  color: lightgray;
+  color: rgb(182, 187, 196);
 }
 
 .name {
   font-family: "Nunito Sans", sans-serif;
-  background-color: red;
+  background-color: rgb(174, 222, 252);
   margin-left: 15px;
   color: white;
   padding: 4px;
@@ -585,10 +585,11 @@ html {
   display: flex;
   align-items: center;
   padding: 10px;
-  color: lightgray;
+  color: rgb(182, 187, 196);
+  font-weight: bold;
 }
 
-.hero, .hero1 {
+.hero, .hero1, .Skills {
   max-width: 1300px;
   margin: 0 auto;
   margin-bottom: 10px;
@@ -643,7 +644,7 @@ html {
 }
 
 .hero1 {
-  height: 100vh;
+  height: 150vh;
 }
 
 .title {
@@ -651,7 +652,7 @@ html {
   justify-content: center;
   font-size: 3.5rem;
   padding: 30px;
-  color: lightgray;
+  color: rgb(182, 187, 196);
 }
 
 .timeline-section {
@@ -673,7 +674,7 @@ html {
   position: absolute;
   width: 1px;
   height: 100%;
-  background-color: lightgray;
+  background-color: rgb(182, 187, 196);
   left: calc(50% - 1px);
 }
 
@@ -699,7 +700,7 @@ html {
 .timeline-dot {
   height: 14px;
   width: 14px;
-  background-color: red;
+  background-color: rgb(174, 222, 252);
   position: absolute;
   left: calc(50% - 7px);
   border-radius: 50%;
@@ -709,12 +710,12 @@ html {
 .timeline-date {
   font-size: 1rem;
   font-weight: 700;
-  color: red;
+  color: rgb(174, 222, 252);
   margin: 6px 0 15px;
 }
 
 .timeline-content {
-  background-color: lightgray;
+  background-color: rgb(174, 222, 252);
   padding: 30px;
   border-radius: 5px;
   position: relative;
@@ -746,6 +747,73 @@ html {
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 22px;
+}
+
+.Skills {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  margin-top: 50px;
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "h h h h c c c c j j j j" "s s s s b b b b p p p p" "a a a a q q q q o o o o";
+}
+
+.html {
+  grid-area: h;
+}
+
+.css {
+  grid-area: c;
+}
+
+.js {
+  grid-area: j;
+}
+
+.sass {
+  grid-area: s;
+}
+
+.bootstrap {
+  grid-area: b;
+}
+
+.c {
+  grid-area: p;
+}
+
+.net {
+  grid-area: a;
+}
+
+.sql {
+  grid-area: q;
+}
+
+.office {
+  grid-area: o;
+}
+
+.skill-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icons {
+  width: 80px;
+  height: 80px;
+}
+
+.skill-title {
+  margin-top: 10px;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 320px) and (max-width: 424px) {
