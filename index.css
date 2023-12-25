@@ -751,14 +751,11 @@ html {
 
 .Skills {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 .content {
-  margin-top: 50px;
+  margin: 0 auto;
   display: grid;
-  grid-gap: 50px;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "h h h h c c c c j j j j" "s s s s b b b b p p p p" "a a a a q q q q o o o o";
@@ -804,6 +801,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .icons {
@@ -816,11 +814,7 @@ html {
   font-size: 1.5rem;
 }
 
-@media (min-width: 320px) and (max-width: 424px) {
- .content {
-  grid-gap: 0px;
-}
-  
+@media (min-width: 320px) and (max-width: 426px) {
   .my-self {
     font-size: 2.5rem;
   }
@@ -828,8 +822,11 @@ html {
     font-size: 1.5rem;
     margin-left: 0px;
   }
+  .skill-items {
+    margin-bottom: 10px;
+  }
 }
-@media (min-width: 425px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 768px) {
   .profession {
     font-size: 1.67rem;
     margin-left: 0px;
