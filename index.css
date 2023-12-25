@@ -609,6 +609,7 @@ html {
   bottom: 30px;
   left: 49.3%;
   transition: bottom 0.3s ease;
+  z-index: 1;
 }
 
 .arrow:hover {
