@@ -607,9 +607,11 @@ html {
 .arrow {
   position: fixed;
   bottom: 30px;
-  left: 49.3%;
   transition: bottom 0.3s ease;
   z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .arrow:hover {
@@ -637,11 +639,11 @@ html {
 .nav-bar a i {
   bottom: 5px;
   position: relative;
-  transition: bottom 0.5s ease;
+  transition: bottom 0.4s ease-in;
 }
 
 .nav-bar a i:hover {
-  bottom: 15px;
+  bottom: 10px;
 }
 
 .hero1 {
