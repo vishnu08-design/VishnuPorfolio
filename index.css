@@ -754,6 +754,10 @@ html {
   height: 100vh;
 }
 
+.Skills .title {
+  margin-bottom: 50px;
+}
+
 .content {
   margin: 0 auto;
   display: grid;
