@@ -14,10 +14,10 @@
 <body>
     <div>
     <div class="nav-bar">
-        <a id="home" href="#hero"><i class="fa-solid fa-house fa-xl" style="color: black;"></i></a>
-        <a id="Studies" href="#hero1"><i class="fa-solid fa-graduation-cap fa-xl" style="color: black;"></i></a>
-        <a id="Experience" href="#Skills"><i class="fa-solid fa-briefcase fa-xl" style="color: black;"></i></a>
-        <a id="Hobbies" href=""><i class="fa-solid fa-headphones fa-xl" style="color: black;"></i></a>
+        <a id="home" href="#hero"><i class="fa-solid fa-house fa-xl" style="color: rgb(174, 222, 252);"></i></a>
+        <a id="Studies" href="#hero1"><i class="fa-solid fa-graduation-cap fa-xl" style="color: rgb(174, 222, 252);"></i></a>
+        <a id="Experience" href="#Skills"><i class="fa-solid fa-briefcase fa-xl" style="color: rgb(174, 222, 252);"></i></a>
+        <a id="Hobbies" href=""><i class="fa-solid fa-headphones fa-xl" style="color: rgb(174, 222, 252);"></i></a>
     </div>
     <div class="hero" id="hero">
         <div class="welcome">
@@ -68,39 +68,39 @@
         <strong class="title">SKILLS</strong>
         <div class="content">
             <div class="skill-items html">
-                <img src="html-5.png" class="icons">
+                <img src="images/html-5.png" class="icons">
                 <h4 class="skill-title"><strong>HTML</strong></h4>
             </div>
             <div class="skill-items css">
-                <img src="css-3.png" class="icons">
+                <img src="images/css-3.png" class="icons">
                 <h4 class="skill-title"><strong>CSS</strong></h4>
             </div>
             <div class="skill-items js">
-                <img src="js.png" class="icons">
+                <img src="images/js.png" class="icons">
                 <h4 class="skill-title"><strong>JAVASCRIPT</strong></h4>
             </div>
             <div class="skill-items sass">
-                <img src="sass.png" class="icons">
+                <img src="images/sass.png" class="icons">
                 <h4 class="skill-title"><strong>SASS</strong></h4>
             </div>
             <div class="skill-items bootstrap">
-                <img src="bootstrap.png" class="icons">
+                <img src="images/bootstrap.png" class="icons">
                 <h4 class="skill-title"><strong>BOOTSTRAP</strong></h4>
             </div>
             <div class="skill-items c">
-                <img src="c-sharp.png" class="icons">
+                <img src="images/c-sharp.png" class="icons">
                 <h4 class="skill-title"><strong>C#</strong></h4>
             </div>
             <div class="skill-items net">
-                <img src="Net.png" class="icons">
+                <img src="images/Net.png" class="icons">
                 <h4 class="skill-title"><strong>.NET FRAMEWORK</strong></h4>
             </div>
             <div class="skill-items sql">
-                <img src="sql-server.png" class="icons">
+                <img src="images/sql-server.png" class="icons">
                 <h4 class="skill-title"><strong>SQL</strong></h4>
             </div>
             <div class="skill-items office">
-                <img src="office.png" class="icons">
+                <img src="images/office.png" class="icons">
                 <h4 class="skill-title"><strong>MS OFFICE</strong></h4>
             </div>
         </div>
@@ -109,6 +109,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const studiesButton = document.getElementById("Studies");
+        const skillsButton = document.getElementById("Experience");
 
         studiesButton.addEventListener("click", function(event) {
             event.preventDefault();
@@ -120,6 +121,20 @@
                 window.scrollTo({ top: offsetTop, behavior: "smooth" });
             } else {
                 const offsetTop = hero1Section.offsetTop;
+                window.scrollTo({ top: offsetTop, behavior: "smooth" });
+            }
+        });
+
+        skillsButton.addEventListener("click", function(event) {
+            event.preventDefault();
+            const skillsSection = document.getElementById("Skills");
+            
+            if (window.innerWidth <= 768) {
+                const navBarHeight = document.querySelector(".nav-bar").offsetHeight;
+                const offsetTop = skillsSection.offsetTop - navBarHeight;
+                window.scrollTo({ top: offsetTop, behavior: "smooth" });
+            } else {
+                const offsetTop = skillsSection.offsetTop;
                 window.scrollTo({ top: offsetTop, behavior: "smooth" });
             }
         });
