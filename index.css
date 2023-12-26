@@ -283,6 +283,10 @@ html {
   .title {
     font-size: 2rem;
   }
+
+  .hero1 {
+    height: 125vh;
+  }
   .timeline-content h3 {
     font-size: 1.5rem;
   }
