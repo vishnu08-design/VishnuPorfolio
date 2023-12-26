@@ -17,11 +17,12 @@ html {
   justify-content: center;
 }
 
-.arrow a {
-  position: fixed;
-  bottom: 30px;
-  transition: bottom 0.3s ease;
-  z-index: 1;
+.arrow a
+{
+    position: fixed;
+    bottom: 30px;
+    transition: bottom 0.3s ease;
+    z-index: 1;
 }
 
 .arrow a:hover {
@@ -40,15 +41,15 @@ html {
   z-index: 1;
 }
 
-.nav-bar-items {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
+.nav-bar-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
 }
 
-.nav-bar-items {
-  bottom: 5px;
+.nav-bar-items{
+    bottom: 5px;
   position: relative;
   transition: bottom 0.3s ease;
 }
@@ -57,10 +58,10 @@ html {
   bottom: 10px;
 }
 
-.nav-bar-items h4 {
-  color: rgb(182, 187, 196);
+.nav-bar-items h4
+{
+    color : rgb(182, 187, 196);
 }
-
 .hero, .hero1, .Skills {
   max-width: 1300px;
   margin: 0 auto;
@@ -280,16 +281,16 @@ html {
 }
 
 @media (min-width: 320px) and (max-width: 426px) {
-  .nav-bar-items a i {
-    font-size: medium !important;
-  }
-  .nav-bar-items {
-    bottom: 12px;
-  }
-  .nav-bar-items h4 {
+      .nav-bar-items a i {
+      font-size: medium !important;
+    }
+
+    .nav-bar-items h4
+{
     font-size: 0.8rem;
-  }
-  .my-self {
+}
+  
+    .my-self {
     font-size: 2.5rem;
   }
   .profession {
@@ -299,15 +300,18 @@ html {
   .title {
     font-size: 2rem;
   }
+
   .hero1 {
     height: 125vh;
   }
+  
   .timeline-content h3 {
     font-size: 1.5rem;
   }
   .timeline-content h4 {
     font-size: 1rem;
   }
+
   .content {
     row-gap: 20px;
   }
@@ -320,13 +324,12 @@ html {
   }
 }
 @media (min-width: 426px) and (max-width: 768px) {
-  .nav-bar-items {
-    bottom: 8px;
-    margin: 30px;
-  }
   .profession {
     font-size: 1.67rem;
     margin-left: 0px;
+  }
+  .nav-bar-items{
+    margin: 30px;
   }
   .hero1 {
     height: 140vh;
@@ -350,13 +353,16 @@ html {
   .nav-bar a i {
     color: white !important;
   }
-  .nav-bar-items h4 {
+
+  .nav-bar-items h4
+  {
     color: white;
     margin-top: 5px;
   }
   .nav-bar-items:hover {
     bottom: 5px;
   }
+
   .hero {
     padding-left: 0px;
     display: flex;
