@@ -280,6 +280,15 @@ html {
 }
 
 @media (min-width: 320px) and (max-width: 426px) {
+  .nav-bar-items a i {
+    font-size: medium !important;
+  }
+  .nav-bar-items {
+    bottom: 12px;
+  }
+  .nav-bar-items h4 {
+    font-size: 0.8rem;
+  }
   .my-self {
     font-size: 2.5rem;
   }
@@ -311,6 +320,9 @@ html {
   }
 }
 @media (min-width: 426px) and (max-width: 768px) {
+  .nav-bar-items {
+    bottom: 8px;
+  }
   .profession {
     font-size: 1.67rem;
     margin-left: 0px;
