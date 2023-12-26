@@ -12,16 +12,19 @@ html {
 }
 
 .arrow {
-  position: fixed;
-  bottom: 30px;
-  transition: bottom 0.3s ease;
-  z-index: 1;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.arrow:hover {
+.arrow a {
+  position: fixed;
+  bottom: 30px;
+  transition: bottom 0.3s ease;
+  z-index: 1;
+}
+
+.arrow a:hover {
   bottom: 37px;
 }
 
@@ -37,20 +40,25 @@ html {
   z-index: 1;
 }
 
-.nav-bar a {
+.nav-bar-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 10px;
-  padding: 10px;
-  border-radius: 50%;
 }
 
-.nav-bar a i {
+.nav-bar-items {
   bottom: 5px;
   position: relative;
-  transition: bottom 0.4s ease-in;
+  transition: bottom 0.3s ease;
 }
 
-.nav-bar a i:hover {
+.nav-bar-items:hover {
   bottom: 10px;
+}
+
+.nav-bar-items h4 {
+  color: rgb(182, 187, 196);
 }
 
 .hero, .hero1, .Skills {
@@ -98,7 +106,7 @@ html {
 }
 
 .hero1 {
-  height: 150vh;
+  height: 120vh;
 }
 
 .title {
@@ -208,12 +216,12 @@ html {
 }
 
 .Skills .title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .content {
-  margin: 0 auto;
   display: grid;
+  row-gap: 50px;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "h h h h c c c c j j j j" "s s s s b b b b p p p p" "a a a a q q q q o o o o";
@@ -259,7 +267,6 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
 }
 
 .icons {
@@ -283,7 +290,6 @@ html {
   .title {
     font-size: 2rem;
   }
-
   .hero1 {
     height: 125vh;
   }
@@ -293,8 +299,8 @@ html {
   .timeline-content h4 {
     font-size: 1rem;
   }
-  .skill-items {
-    margin-bottom: 10px;
+  .content {
+    row-gap: 20px;
   }
   .icons {
     width: 50px;
@@ -309,6 +315,9 @@ html {
     font-size: 1.67rem;
     margin-left: 0px;
   }
+  .hero1 {
+    height: 140vh;
+  }
 }
 @media (max-width: 769px) {
   .move {
@@ -316,7 +325,7 @@ html {
   }
   .nav-bar {
     width: 100%;
-    height: 60px;
+    height: 70px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -328,7 +337,11 @@ html {
   .nav-bar a i {
     color: white !important;
   }
-  .nav-bar a i:hover {
+  .nav-bar-items h4 {
+    color: white;
+    margin-top: 5px;
+  }
+  .nav-bar-items:hover {
     bottom: 5px;
   }
   .hero {
