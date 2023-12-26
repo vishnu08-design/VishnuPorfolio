@@ -62,7 +62,7 @@ html {
 {
     color : rgb(182, 187, 196);
 }
-.hero, .hero1, .Skills {
+.hero, .hero1, .Skills, .Hobbies {
   max-width: 1300px;
   margin: 0 auto;
   margin-bottom: 10px;
@@ -278,12 +278,14 @@ html {
 .skill-title {
   margin-top: 10px;
   font-size: 1.5rem;
+  color: rgb(182, 187, 196);
 }
 
+.Hobbie {
+    height: 100vh;
+  }
+
 @media (min-width: 320px) and (max-width: 426px) {
-      .nav-bar-items a i {
-      font-size: medium !important;
-    }
 
     .nav-bar-items h4
 {
@@ -323,13 +325,16 @@ html {
     font-size: 0.8rem;
   }
 }
+
+@media (min-width: 320px) and (max-width: 550px) {
+    .nav-bar-items a i {
+        font-size: medium !important;
+      }
+}
 @media (min-width: 426px) and (max-width: 768px) {
   .profession {
     font-size: 1.67rem;
     margin-left: 0px;
-  }
-  .nav-bar-items{
-    margin: 30px;
   }
   .hero1 {
     height: 140vh;
