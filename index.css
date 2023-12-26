@@ -17,12 +17,11 @@ html {
   justify-content: center;
 }
 
-.arrow a
-{
-    position: fixed;
-    bottom: 30px;
-    transition: bottom 0.3s ease;
-    z-index: 1;
+.arrow a {
+  position: fixed;
+  bottom: 30px;
+  transition: bottom 0.3s ease;
+  z-index: 1;
 }
 
 .arrow a:hover {
@@ -41,15 +40,15 @@ html {
   z-index: 1;
 }
 
-.nav-bar-items{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
+.nav-bar-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
 }
 
-.nav-bar-items{
-    bottom: 5px;
+.nav-bar-items {
+  bottom: 5px;
   position: relative;
   transition: bottom 0.3s ease;
 }
@@ -58,10 +57,11 @@ html {
   bottom: 10px;
 }
 
-.nav-bar-items h4
-{
-    color : rgb(182, 187, 196);
+.nav-bar-items h4 {
+  color: rgb(182, 187, 196);
+  margin-top: 3px;
 }
+
 .hero, .hero1, .Skills, .Hobbies {
   max-width: 1300px;
   margin: 0 auto;
@@ -89,7 +89,7 @@ html {
 
 .name {
   font-family: "Nunito Sans", sans-serif;
-  background-color: rgb(174, 222, 252);
+  background-color: rgb(40, 156, 227);
   margin-left: 15px;
   color: white;
   padding: 4px;
@@ -104,6 +104,23 @@ html {
   padding: 10px;
   color: rgb(182, 187, 196);
   font-weight: bold;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.social-media a {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgb(40, 156, 227);
+}
+
+.social-media a i {
+  color: white !important;
 }
 
 .hero1 {
@@ -163,7 +180,7 @@ html {
 .timeline-dot {
   height: 14px;
   width: 14px;
-  background-color: rgb(174, 222, 252);
+  background-color: rgb(40, 156, 227);
   position: absolute;
   left: calc(50% - 7px);
   border-radius: 50%;
@@ -173,12 +190,12 @@ html {
 .timeline-date {
   font-size: 1rem;
   font-weight: 700;
-  color: rgb(174, 222, 252);
+  color: rgb(40, 156, 227);
   margin: 6px 0 15px;
 }
 
 .timeline-content {
-  background-color: rgb(174, 222, 252);
+  background-color: rgb(40, 156, 227);
   padding: 30px;
   border-radius: 5px;
   position: relative;
@@ -282,17 +299,32 @@ html {
 }
 
 .Hobbie {
-    height: 100vh;
-  }
+  height: 100vh;
+}
+
+.Interests-Section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.Interest-Items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Interest-Items h4 {
+  margin-top: 10px;
+  color: rgb(182, 187, 196);
+}
 
 @media (min-width: 320px) and (max-width: 426px) {
-
-    .nav-bar-items h4
-{
+  .nav-bar-items h4 {
     font-size: 0.8rem;
-}
-  
-    .my-self {
+  }
+  .my-self {
     font-size: 2.5rem;
   }
   .profession {
@@ -302,18 +334,15 @@ html {
   .title {
     font-size: 2rem;
   }
-
   .hero1 {
     height: 125vh;
   }
-  
   .timeline-content h3 {
     font-size: 1.5rem;
   }
   .timeline-content h4 {
     font-size: 1rem;
   }
-
   .content {
     row-gap: 20px;
   }
@@ -324,12 +353,14 @@ html {
   .skill-title {
     font-size: 0.8rem;
   }
+  .Skills {
+    height: 75vh;
+  }
 }
-
 @media (min-width: 320px) and (max-width: 550px) {
-    .nav-bar-items a i {
-        font-size: medium !important;
-      }
+  .nav-bar-items a i {
+    font-size: medium !important;
+  }
 }
 @media (min-width: 426px) and (max-width: 768px) {
   .profession {
@@ -338,6 +369,20 @@ html {
   }
   .hero1 {
     height: 140vh;
+  }
+  .Skills {
+    height: 125vh;
+  }
+}
+@media (min-width: 769px) {
+  .social-media {
+    width: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .social-media a {
+    margin: 0px;
   }
 }
 @media (max-width: 769px) {
@@ -358,16 +403,13 @@ html {
   .nav-bar a i {
     color: white !important;
   }
-
-  .nav-bar-items h4
-  {
+  .nav-bar-items h4 {
     color: white;
     margin-top: 5px;
   }
   .nav-bar-items:hover {
     bottom: 5px;
   }
-
   .hero {
     padding-left: 0px;
     display: flex;
