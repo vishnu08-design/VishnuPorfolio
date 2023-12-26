@@ -9,7 +9,10 @@
 html {
   scroll-behavior: smooth;
   scroll-padding: 10rem;
-  background-image: linear-gradient(to right bottom, #ffffff, #fbf6fc, #faedf4, #fce4e8, #fbdbd8);
+}
+
+body {
+  background-image: linear-gradient(to right bottom, #fcf2f8, #faeaf3, #f8e1ee, #f6d9e9, #f4d0e4, #ecc5da, #e4bad1, #dcafc7, #cc9fb7, #bd8ea7, #ad7f98, #9e6f89);
 }
 
 .arrow {
@@ -63,7 +66,7 @@ html {
 }
 
 .nav-bar-items h4 {
-  color: #BFA5A4;
+  color: #2C1421;
   margin-top: 3px;
 }
 
@@ -84,17 +87,17 @@ html {
 
 .welcome {
   font-size: 2.5rem;
-  color: #BFA5A4;
+  color: #2C1421;
 }
 
 .my-self {
   font-size: 3.5rem;
-  color: #BFA5A4;
+  color: #2C1421;
 }
 
 .name {
   font-family: "Nunito Sans", sans-serif;
-  background-color: #897170;
+  background-color: #9E6F89;
   margin-left: 15px;
   color: white;
   padding: 4px;
@@ -107,7 +110,7 @@ html {
   display: flex;
   align-items: center;
   padding: 10px;
-  color: #BFA5A4;
+  color: #2C1421;
   font-weight: bold;
 }
 
@@ -121,7 +124,7 @@ html {
   margin: 20px;
   padding: 10px;
   border-radius: 50%;
-  background-color: #897170;
+  background-color: #9E6F89;
 }
 
 .social-media a i {
@@ -137,7 +140,7 @@ html {
   justify-content: center;
   font-size: 3.5rem;
   padding: 30px;
-  color: #BFA5A4;
+  color: #2C1421;
 }
 
 .timeline-section {
@@ -159,7 +162,7 @@ html {
   position: absolute;
   width: 1px;
   height: 100%;
-  background-color: #BFA5A4;
+  background-color: #2C1421;
   left: calc(50% - 1px);
 }
 
@@ -185,7 +188,7 @@ html {
 .timeline-dot {
   height: 14px;
   width: 14px;
-  background-color: #897170;
+  background-color: #9E6F89;
   position: absolute;
   left: calc(50% - 7px);
   border-radius: 50%;
@@ -195,12 +198,12 @@ html {
 .timeline-date {
   font-size: 1rem;
   font-weight: 700;
-  color: #897170;
+  color: #9E6F89;
   margin: 6px 0 15px;
 }
 
 .timeline-content {
-  background-color: #897170;
+  background-color: #9E6F89;
   padding: 30px;
   border-radius: 5px;
   position: relative;
@@ -300,7 +303,7 @@ html {
 .skill-title {
   margin-top: 10px;
   font-size: 1.5rem;
-  color: #BFA5A4;
+  color: #2C1421;
 }
 
 .Hobbie {
@@ -322,7 +325,7 @@ html {
 
 .Interest-Items h4 {
   margin-top: 10px;
-  color: #BFA5A4;
+  color: #2C1421;
 }
 
 @media (min-width: 320px) and (max-width: 426px) {
@@ -410,7 +413,7 @@ html {
     color: #4B4453 !important;
   }
   .nav-bar-items h4 {
-    color: #BFA5A4;
+    color: #2C1421;
     margin-top: 5px;
   }
   .nav-bar-items:hover {
