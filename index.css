@@ -322,6 +322,7 @@ html {
 @media (min-width: 426px) and (max-width: 768px) {
   .nav-bar-items {
     bottom: 8px;
+    margin: 30px;
   }
   .profession {
     font-size: 1.67rem;
