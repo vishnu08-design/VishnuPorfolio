@@ -420,20 +420,25 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
     top: 30px;
     display: block;
     z-index: 2;
+    color: white !important;
+    cursor: pointer;
   }
     .move {
     margin-left: 0px;
   }
   .nav-bar {
-    display: none;
-    width: 100%;
+    display: flex;
+    width: 80%;
     height: 105vh;
+    right: -80%;
     justify-content: center;
     align-items: center;
     position: fixed;
-    background-image: linear-gradient(to left bottom, #ffffff, #f1f0fd, #e1e1fc, #d0d3fb, #bcc5fa, #adbaf8, #9eaff6, #8da5f4, #829af0, #778feb, #6c85e7, #617ae2);
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    transition: right 0.5s ease;
   }
-
+  
 
   .nav-bar-items{
     display: flex;
@@ -443,10 +448,12 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
 .nav-bar-items h4
 {
   text-align: center;
-  width: 150px;
+  width: 200px;
   padding: 8px;
   border-radius: 10px;
-  background-color:white;
+  color: white !important;
+  font-size: 1.8rem;
+  font-weight: 900px !important;
 }
   .nav-bar-items a{
     display: none;
@@ -484,10 +491,16 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
 }
 
 
-.menu-close {
-  display: none;
+.nav-bar.open {
+  right: 0;
+  transition: right 0.6s ease;
 }
 
-.nav-bar.open {
-  display: flex;
+
+.menu i {
+  transition: transform 0.6s ease;
+}
+
+.menu.open i {
+  transform: rotate(-90deg); /* Adjust the rotation based on your design */
 }
