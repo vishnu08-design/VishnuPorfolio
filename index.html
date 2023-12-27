@@ -21,20 +21,20 @@
     <div>
     <div class="nav-bar">
         <div class="nav-bar-items">
-            <a id="home" href="#hero"><i class="fa-solid fa-house fa-xl" style="color: #9E6F89;"></i></a>
-            <h4><strong>HOME</strong></h4>
+            <a id="home" href="#hero"><i class="fa-solid fa-house fa-xl" style="color: #0B1C63;"></i></a>
+            <h4 for="home"><strong>HOME</strong></h4>
         </div>
         <div class="nav-bar-items">
-            <a id="Studies" href="#hero1"><i class="fa-solid fa-graduation-cap fa-xl" style="color: #9E6F89;"></i></a>
-            <h4><strong>EDUCATION</strong></h4>
+            <a id="Studies" href="#hero1"><i class="fa-solid fa-graduation-cap fa-xl" style="color: #0B1C63;"></i></a>
+            <h4 for="Studies"><strong>EDUCATION</strong></h4>
         </div>
         <div class="nav-bar-items">
-            <a id="Experience" href="#Skills"><i class="fa-solid fa-screwdriver-wrench fa-xl" style="color: #9E6F89;"></i></a>
-            <h4><strong>SKILLS</strong></h4>
+            <a id="Experience" href="#Skills"><i class="fa-solid fa-screwdriver-wrench fa-xl" style="color: #0B1C63;"></i></a>
+            <h4 for="Experience"><strong>SKILLS</strong></h4>
         </div>
         <div class="nav-bar-items">
-            <a id="Hobbie" href="#Hobbies"><i class="fa-solid fa-headphones fa-xl" style="color: #9E6F89;"></i></a>
-            <h4><strong>INTERESTS</strong></h4>
+            <a id="Hobbie" href="#Hobbies"><i class="fa-solid fa-headphones fa-xl" style="color: #0B1C63;"></i></a>
+            <h4 for="Hobbie"><strong>INTERESTS</strong></h4>
         </div>
     </div>
     <div class="hero" id="hero">
@@ -151,54 +151,42 @@
 </div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const studiesButton = document.getElementById("Studies");
-        const skillsButton = document.getElementById("Experience");
-        const InterestsButton = document.getElementById("Hobbie");
-
-        studiesButton.addEventListener("click", function(event) {
-            event.preventDefault();
-            const hero1Section = document.getElementById("hero1");
-            
-            if (window.innerWidth <= 768) {
-                const navBarHeight = document.querySelector(".nav-bar").offsetHeight;
-                const offsetTop = hero1Section.offsetTop - navBarHeight;
-                window.scrollTo({ top: offsetTop, behavior: "smooth" });
-            } else {
-                const offsetTop = hero1Section.offsetTop;
-                window.scrollTo({ top: offsetTop, behavior: "smooth" });
-            }
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.querySelector(".menu");
+        const navBar = document.querySelector(".nav-bar");
+    
+        menuButton.addEventListener("click", function () {
+            navBar.classList.toggle("open");
+            menuButton.querySelector("i").classList.toggle("fa-bars");
+            menuButton.querySelector("i").classList.toggle("fa-times");
         });
-
-        skillsButton.addEventListener("click", function(event) {
-            event.preventDefault();
-            const skillsSection = document.getElementById("Skills");
-            
-            if (window.innerWidth <= 768) {
-                const navBarHeight = document.querySelector(".nav-bar").offsetHeight;
-                const offsetTop = skillsSection.offsetTop - navBarHeight;
-                window.scrollTo({ top: offsetTop, behavior: "smooth" });
-            } else {
-                const offsetTop = skillsSection.offsetTop;
-                window.scrollTo({ top: offsetTop, behavior: "smooth" });
+    
+        const scrollToSection = function (sectionId) {
+            const section = document.getElementById(sectionId);
+    
+            if (section) {
+                window.scrollTo({ top: section.offsetTop, behavior: "smooth" });
+                if (window.innerWidth < 768) {
+                    // Close the menu if the screen size is less than 768px
+                    navBar.classList.remove("open");
+                    menuButton.querySelector("i").classList.remove("fa-times");
+                    menuButton.querySelector("i").classList.add("fa-bars");
+                }
             }
-        });
-
-        InterestsButton.addEventListener("click", function(event) {
-            event.preventDefault();
-            const InterestsSection = document.getElementById("Hobbies");
-            
-            if (window.innerWidth <= 768) {
-                const navBarHeight = document.querySelector(".nav-bar").offsetHeight;
-                const offsetTop = InterestsSection.offsetTop - navBarHeight;
-                window.scrollTo({ top: offsetTop, behavior: "smooth" });
-            } else {
-                const offsetTop = InterestsSection.offsetTop;
-                window.scrollTo({ top: offsetTop, behavior: "smooth" });
-            }
+        };
+    
+        const navBarItems = document.querySelectorAll(".nav-bar-items");
+        navBarItems.forEach(item => {
+            item.addEventListener("click", function (event) {
+                event.preventDefault();
+                const clickedSectionId = item.querySelector("a").getAttribute("href").substring(1);
+                scrollToSection(clickedSectionId);
+            });
         });
     });
-</script>
+    </script>
+    
+    
 
 </body>
 </html>
