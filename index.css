@@ -37,6 +37,20 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
   bottom: 37px;
 }
 
+.nav-bar.open {
+  right: 0;
+  transition: right 0.6s ease;
+}
+
+
+.menu i {
+  transition: transform 0.6s ease;
+}
+
+.menu.open i {
+  transform: rotate(-90deg);
+}
+
 .nav-bar {
   max-width: 1300px;
   display: flex;
@@ -52,25 +66,19 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
 .nav-bar-items{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 10px;
-    cursor: pointer;
-}
-
-.nav-bar-items{
-    bottom: 5px;
-  position: relative;
-  transition: bottom 0.3s ease;
-}
-
-.nav-bar-items:hover {
-  bottom: 10px;
+    margin: 20px;
+    cursor: pointer;    
 }
 
 .nav-bar-items h4
 {
     color : #0B1C63;
+    position: absolute;
+    left: 70px;
 }
+
 .hero, .hero1, .Skills, .Hobbies {
   max-width: 1300px;
   margin: 0 auto;
@@ -340,6 +348,10 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
 {
     font-size: 0.8rem;
 }
+
+.nav-bar-items a i {
+  font-size: medium !important;
+}
   
     .my-self {
     font-size: 2.5rem;
@@ -380,11 +392,7 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
 }
 }
 
-@media (min-width: 320px) and (max-width: 550px) {
-    .nav-bar-items a i {
-        font-size: medium !important;
-      }
-}
+
 @media (min-width: 426px) and (max-width: 768px) {
   .profession {
     font-size: 1.67rem;
@@ -398,20 +406,6 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
 }
 }
 
-@media (min-width: 769px) {
-.social-media
-{
-    width: 390px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.social-media a
-{
-    margin: 0px;
-}
-}
 @media (max-width: 769px) {
   .menu
   {
@@ -442,11 +436,13 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
 
   .nav-bar-items{
     display: flex;
-    margin: 20px;
+    margin: 10px;
 }
 
 .nav-bar-items h4
 {
+  position: relative;
+  left: 0px;
   text-align: center;
   width: 200px;
   padding: 8px;
@@ -490,17 +486,17 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
   }
 }
 
-
-.nav-bar.open {
-  right: 0;
-  transition: right 0.6s ease;
-}
-
-
-.menu i {
-  transition: transform 0.6s ease;
-}
-
-.menu.open i {
-  transform: rotate(-90deg); /* Adjust the rotation based on your design */
-}
+@media (min-width: 769px) {
+  .social-media
+  {
+    width: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .social-media a
+  {
+      margin: 0px;
+  }
+  }
