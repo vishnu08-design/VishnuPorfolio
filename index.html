@@ -154,29 +154,28 @@
     document.addEventListener("DOMContentLoaded", function () {
         const menuButton = document.querySelector(".menu");
         const navBar = document.querySelector(".nav-bar");
-    
+
         menuButton.addEventListener("click", function () {
             navBar.classList.toggle("open");
             menuButton.classList.toggle("open");
-    
-            // Check if the menuButton has the 'open' class
+
             const isOpen = menuButton.classList.contains("open");
-    
-            // Change the icon based on the menu state
             const iconClass = isOpen ? "fa-times" : "fa-bars";
             menuButton.querySelector("i").className = `fas ${iconClass} fa-xl`;
-    
-            // Show/hide the nav-bar based on the menu state
             if (isOpen) {
-                navBar.style.right = "0";
+                if (window.innerWidth < 768) {
+                    navBar.style.right = "0";
+                }
             } else {
-                navBar.style.right = "-80%"; // Adjust this value based on your design
+                if (window.innerWidth < 768) {
+                    navBar.style.right = "-80%";
+                }
             }
         });
-    
+
         const scrollToSection = function (sectionId) {
             const section = document.getElementById(sectionId);
-    
+
             if (section) {
                 window.scrollTo({ top: section.offsetTop, behavior: "smooth" });
                 if (window.innerWidth < 768) {
@@ -185,7 +184,7 @@
                 }
             }
         };
-    
+
         const navBarItems = document.querySelectorAll(".nav-bar-items");
         navBarItems.forEach(item => {
             item.addEventListener("click", function (event) {
@@ -194,26 +193,23 @@
                 scrollToSection(clickedSectionId);
             });
         });
-    
+
         // Close the nav-bar when clicking outside of it
         document.body.addEventListener("click", function (event) {
             if (!navBar.contains(event.target) && !menuButton.contains(event.target)) {
                 navBar.classList.remove("open");
                 menuButton.classList.remove("open");
-    
+
                 // Reset the icon to bars when closing the menu
                 menuButton.querySelector("i").className = "fas fa-bars fa-xl";
-                
-                // Hide the nav-bar when closing the menu
-                navBar.style.right = "-80%"; // Adjust this value based on your design
+
+                // Hide the nav-bar when closing the menu and on small screens
+                if (window.innerWidth < 768) {
+                    navBar.style.right = "-80%"; // Adjust this value based on your design
+                }
             }
         });
     });
-    </script>
-    
-
-    
-    
-
+</script>
 </body>
 </html>
