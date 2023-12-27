@@ -16,7 +16,7 @@
         <a id="home" href="#hero"><i class="fa-solid fa-angles-up fa-xl" style="color: black;"></i></a>
     </div>
     <div class="menu">
-        <i class="fa-solid fa-bars fa-xl"></i>
+        <i class="fas fa-bars fa-xl"></i>
     </div>
     <div>
     <div class="nav-bar">
@@ -89,39 +89,39 @@
         <strong class="title">SKILLS</strong>
         <div class="content">
             <div class="skill-items html">
-                <img src="html-5.png" class="icons">
+                <img src="images/html-5.png" class="icons">
                 <h4 class="skill-title"><strong>HTML</strong></h4>
             </div>
             <div class="skill-items css">
-                <img src="css-3.png" class="icons">
+                <img src="images/css-3.png" class="icons">
                 <h4 class="skill-title"><strong>CSS</strong></h4>
             </div>
             <div class="skill-items js">
-                <img src="js.png" class="icons">
+                <img src="images/js.png" class="icons">
                 <h4 class="skill-title"><strong>JAVASCRIPT</strong></h4>
             </div>
             <div class="skill-items sass">
-                <img src="sass.png" class="icons">
+                <img src="images/sass.png" class="icons">
                 <h4 class="skill-title"><strong>SASS</strong></h4>
             </div>
             <div class="skill-items bootstrap">
-                <img src="bootstrap.png" class="icons">
+                <img src="images/bootstrap.png" class="icons">
                 <h4 class="skill-title"><strong>BOOTSTRAP</strong></h4>
             </div>
             <div class="skill-items c">
-                <img src="c-sharp.png" class="icons">
+                <img src="images/c-sharp.png" class="icons">
                 <h4 class="skill-title"><strong>C#</strong></h4>
             </div>
             <div class="skill-items net">
-                <img src="Net.png" class="icons">
+                <img src="images/Net.png" class="icons">
                 <h4 class="skill-title"><strong>.NET FRAMEWORK</strong></h4>
             </div>
             <div class="skill-items sql">
-                <img src="sql-server.png" class="icons">
+                <img src="images/sql-server.png" class="icons">
                 <h4 class="skill-title"><strong>SQL</strong></h4>
             </div>
             <div class="skill-items office">
-                <img src="office.png" class="icons">
+                <img src="images/office.png" class="icons">
                 <h4 class="skill-title"><strong>MS OFFICE</strong></h4>
             </div>
         </div>
@@ -131,19 +131,19 @@
         <strong class="title">INTERESTS</strong>
         <div class="Interests-Section">
             <div class="Interest-Items">
-                <img src="cricket.png" class="icons">
+                <img src="images/cricket.png" class="icons">
                 <h4 class=""><strong>CRICKET</strong></h4>
             </div>
             <div class="Interest-Items">
-                <img src="badminton.png" class="icons">
+                <img src="images/badminton.png" class="icons">
                 <h4 class=""><strong>BADMINTON</strong></h4>
             </div>
             <div class="Interest-Items">
-                <img src="music.png" class="icons">
+                <img src="images/music.png" class="icons">
                 <h4 class=""><strong>MUSIC</strong></h4>
             </div>
             <div class="Interest-Items">
-                <img src="joystick.png" class="icons">
+                <img src="images/joystick.png" class="icons">
                 <h4 class=""><strong>GAMING</strong></h4>
             </div>
         </div>
@@ -157,8 +157,21 @@
     
         menuButton.addEventListener("click", function () {
             navBar.classList.toggle("open");
-            menuButton.querySelector("i").classList.toggle("fa-bars");
-            menuButton.querySelector("i").classList.toggle("fa-times");
+            menuButton.classList.toggle("open");
+    
+            // Check if the menuButton has the 'open' class
+            const isOpen = menuButton.classList.contains("open");
+    
+            // Change the icon based on the menu state
+            const iconClass = isOpen ? "fa-times" : "fa-bars";
+            menuButton.querySelector("i").className = `fas ${iconClass} fa-xl`;
+    
+            // Show/hide the nav-bar based on the menu state
+            if (isOpen) {
+                navBar.style.right = "0";
+            } else {
+                navBar.style.right = "-80%"; // Adjust this value based on your design
+            }
         });
     
         const scrollToSection = function (sectionId) {
@@ -167,10 +180,8 @@
             if (section) {
                 window.scrollTo({ top: section.offsetTop, behavior: "smooth" });
                 if (window.innerWidth < 768) {
-                    // Close the menu if the screen size is less than 768px
                     navBar.classList.remove("open");
-                    menuButton.querySelector("i").classList.remove("fa-times");
-                    menuButton.querySelector("i").classList.add("fa-bars");
+                    menuButton.classList.remove("open");
                 }
             }
         };
@@ -183,8 +194,24 @@
                 scrollToSection(clickedSectionId);
             });
         });
+    
+        // Close the nav-bar when clicking outside of it
+        document.body.addEventListener("click", function (event) {
+            if (!navBar.contains(event.target) && !menuButton.contains(event.target)) {
+                navBar.classList.remove("open");
+                menuButton.classList.remove("open");
+    
+                // Reset the icon to bars when closing the menu
+                menuButton.querySelector("i").className = "fas fa-bars fa-xl";
+                
+                // Hide the nav-bar when closing the menu
+                navBar.style.right = "-80%"; // Adjust this value based on your design
+            }
+        });
     });
     </script>
+    
+
     
     
 
