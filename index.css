@@ -82,7 +82,6 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
 .hero, .hero1, .Skills, .Hobbies {
   max-width: 1300px;
   margin: 0 auto;
-  margin-bottom: 10px;
 }
 
 .hero {
@@ -143,9 +142,6 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
     color: white !important;
 }
 
-.hero1 {
-  height: 120vh;    
-}
 
 .title {
   display: flex;
@@ -156,7 +152,6 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
 }
 
 .timeline-section {
-  min-height: 100vh;
   padding: 30px 15px;
   z-index: -1;
 }
@@ -249,8 +244,9 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
   line-height: 22px;
 }
 
-.Skills {
-  height: 100vh;
+.Skills
+{
+  margin-top: 40px;
 }
 
 .Skills .title {
@@ -318,9 +314,11 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
   color: #0B1C63;
 }
 
-.Hobbie {
-    height: 100vh;
-  }
+.Hobbie
+{
+  height: 100vh;
+  margin-top: 40px;
+}
 
 .Interests-Section
 {
@@ -344,52 +342,7 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
 }
 @media (min-width: 320px) and (max-width: 426px) {
 
-    .nav-bar-items h4
-{
-    font-size: 0.8rem;
-}
 
-.nav-bar-items a i {
-  font-size: medium !important;
-}
-  
-    .my-self {
-    font-size: 2.5rem;
-  }
-  .profession {
-    font-size: 1.5rem;
-    margin-left: 0px;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  .hero1 {
-    height: 125vh;
-  }
-  
-  .timeline-content h3 {
-    font-size: 1.5rem;
-  }
-  .timeline-content h4 {
-    font-size: 1rem;
-  }
-
-  .content {
-    row-gap: 20px;
-  }
-  .icons {
-    width: 50px;
-    height: 50px;
-  }
-  .skill-title {
-    font-size: 0.8rem;
-  }
-
-  .Skills {
-    height: 75vh;
-}
 }
 
 
@@ -398,12 +351,6 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
     font-size: 1.67rem;
     margin-left: 0px;
   }
-  .hero1 {
-    height: 140vh;
-  }
-  .Skills {
-    height: 125vh;
-}
 }
 
 @media (max-width: 769px) {
@@ -423,7 +370,7 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
   .nav-bar {
     display: flex;
     width: 80%;
-    height: 105vh;
+    height: 100vh;
     right: -80%;
     justify-content: center;
     align-items: center;
@@ -484,6 +431,45 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
   .timeline-dot {
     left: 0;
   }
+
+  .nav-bar-items h4
+  {
+      font-size: 0.8rem;
+  }
+  
+  .nav-bar-items a i {
+    font-size: medium !important;
+  }
+    
+      .my-self {
+      font-size: 2.5rem;
+    }
+    .profession {
+      font-size: 1.5rem;
+      margin-left: 0px;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+    
+    .timeline-content h3 {
+      font-size: 1.5rem;
+    }
+    .timeline-content h4 {
+      font-size: 1rem;
+    }
+  
+    .content {
+      row-gap: 20px;
+    }
+    .icons {
+      width: 50px;
+      height: 50px;
+    }
+    .skill-title {
+      font-size: 0.8rem;
+    }
 }
 
 @media (min-width: 769px) {
@@ -499,4 +485,6 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
   {
       margin: 0px;
   }
+
+  
   }
