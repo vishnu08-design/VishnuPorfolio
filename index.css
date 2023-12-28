@@ -33,10 +33,6 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
     z-index: 1;
 }
 
-.arrow a:hover {
-  bottom: 37px;
-}
-
 .nav-bar.open {
   right: 0;
   transition: right 0.6s ease;
@@ -75,8 +71,8 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
 .nav-bar-items h4
 {
     color : #0B1C63;
-    position: absolute;
-    left: 70px;
+    font-size: 0.8rem;
+    font-weight: bolder;
 }
 
 .hero, .hero1, .Skills, .Hobbies {
@@ -473,6 +469,14 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
 }
 
 @media (min-width: 769px) {
+
+  .arrow a
+{
+    bottom: 30px;
+}
+  .arrow a:hover {
+    bottom: 37px;
+  }
   .social-media
   {
     width: 390px;
@@ -484,6 +488,33 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
   .social-media a
   {
       margin: 0px;
+  }
+  .nav-bar-items {
+    position: relative;
+    margin: 25px;
+  }
+
+  .nav-bar-items h4
+{
+    color : white;
+    position: absolute;
+    left: 50px;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    background-color: #617AE2;
+    padding: 6px;
+    border-radius: 10px;
+}
+  .nav-bar-items:hover h4 {
+    opacity: 1;
+    left:40px /* Set a value that is large enough to accommodate your content */
+  }
+  
+  .nav-bar-items h4 {
+    opacity: 0;
+    left: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, left 0.5s ease; /* Adjust the duration and timing function as needed */
   }
 
   
