@@ -136,7 +136,7 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
 
 .social-media a:hover {
     transform: translateY(-3px);
-    box-shadow: 0px 0px 10px;
+    box-shadow: 0px 0px 10px white;
 }
 
 .social-media a i
