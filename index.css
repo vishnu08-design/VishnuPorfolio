@@ -131,6 +131,12 @@ background-image: linear-gradient(to right bottom, #ffffff, #f1f0fd, #e1e1fc, #d
     padding: 10px;
     border-radius: 50%;
     background-color: #617AE2;
+    transition : transform 0.3s;
+}
+
+.social-media a:hover
+{
+    transform : scale(5px);
 }
 
 .social-media a i
